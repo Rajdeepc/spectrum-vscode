@@ -1,4 +1,4 @@
-import DesignTokens from '@ubie/design-tokens';
+import DesignTokens from '@spectrum-css/tokens';
 import {
   createConnection,
   TextDocuments,

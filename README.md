@@ -1,22 +1,22 @@
-# Ubie Design Tokens for VS Code
+# Spectrum Design Tokens for VS Code
 
 ## Installation
 
-[👉 Install via the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Ubie.ubie-design-tokens-for-vscode)
+<!-- [👉 Install via the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Ubie.ubie-design-tokens-for-vscode) -->
 
 ## Features
 
-### Autocomplete
+<!-- ### Autocomplete
 
 Autocomplete suggestions for the Ubie Design Tokens
 
-![Demo of autocomplete](https://github.com/ubie-oss/design-tokens-for-vscode/blob/main/docs/autocomplete.gif?raw=true)
+![Demo of autocomplete](https://github.com/ubie-oss/design-tokens-for-vscode/blob/main/docs/autocomplete.gif?raw=true) -->
 
-### Hover preview
+<!-- ### Hover preview
 
 See the exact value of the Ubie Design Tokens's CSS custom property by hovering over it.
 
-![Demo of hover preview](https://github.com/ubie-oss/design-tokens-for-vscode/blob/main/docs/hover.gif?raw=true)
+![Demo of hover preview](https://github.com/ubie-oss/design-tokens-for-vscode/blob/main/docs/hover.gif?raw=true) -->
 
 ## How to use
 
