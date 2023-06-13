@@ -2,7 +2,7 @@
   "name": "spectrum-design-tokens-for-vscode",
   "version": "0.0.1",
   "description": "Spectrum Design Tokens for VS Code",
-  "publisher": "Adobe",
+  "publisher": "RajdeepChandra",
   "engines": {
     "vscode": "^1.70.0"
   },

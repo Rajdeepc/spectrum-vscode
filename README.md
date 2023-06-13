@@ -1,11 +1,9 @@
 # Spectrum Design Tokens for VS Code
 
 
-
-
 ## Installation
 
-<!-- [👉 Install via the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Ubie.ubie-design-tokens-for-vscode) -->
+[👉 Install via the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=RajdeepChandra.spectrum-design-tokens-for-vscode)
 
 ## Features
 
