@@ -36,10 +36,30 @@ connection.onInitialize(() => {
 
 const tokens: { [key: string]: { value: string; note: string | undefined } } = {};
 
+// dynamic representation of token values
+function constructValue(valueObj) {
+  if (valueObj.sets) {
+    const sets = [];
+
+    for (const setName in valueObj.sets) {
+      if (valueObj.sets.hasOwnProperty(setName)) {
+        const set = valueObj.sets[setName];
+        sets.push(`${setName}: ${constructValue(set)}`);
+      }
+    }
+
+    return sets.join(', ');
+  } else {
+    return valueObj.value || '';
+  }
+}
+
 Object.keys(DesignTokens).forEach((key) => {
   const token = `--spectrum-${key}`;
   const note = `${DesignTokens[key]?.value}`;
-  const value = DesignTokens[key].sets ? `light: ${DesignTokens[key]?.sets?.light?.value} , dark: ${DesignTokens[key]?.sets?.dark?.value}, darkest: ${DesignTokens[key]?.sets?.darkest?.value}` : `${DesignTokens[key]?.value}`;
+  const valueObj = DesignTokens[key];
+  const value = constructValue(valueObj);
+
   tokens[token] = { value, note };
 });
 
@@ -58,7 +78,7 @@ connection.onCompletion((textDocumentPosition: TextDocumentPositionParams): Comp
   Object.keys(tokens).map((token) => {
     allCompletionItems.push({
       label: token,
-      detail: `${tokens[token].value}${tokens[token].note ? ` (${tokens[token].note})` : ''}`,
+      detail: tokens[token].value,
       insertText: `var(${token})`,
       kind: CompletionItemKind.Value,
     });
@@ -97,7 +117,7 @@ connection.onHover((textDocumentPosition: TextDocumentPositionParams): Hover => 
   }
 
   return {
-    contents: `${result}: ${tokens[result].value}`,
+    contents: `${tokens[result].value}`,
   };
 });
 
